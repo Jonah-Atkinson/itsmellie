@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mellie | Puzzle Creator (@itsmellieeee)</title>
+    <meta name="description" content="Mellie (@itsmellieeee) makes jigsaw puzzle content for an engaged audience across TikTok and Instagram. Partnership inquiries welcome." />
+    <meta name="theme-color" content="#FBF6F0" />
+
+    <!-- Social share preview (what shows when this link is pasted into email/DMs) -->
+    <meta property="og:title" content="Mellie | @itsmellieeee" />
+    <meta property="og:description" content="Giant jigsaw puzzle builds and satisfying reveals. Partnership inquiries welcome." />
+    <meta property="og:image" content="https://itsmellie.com/assets/profile-900.png" />
+    <meta property="og:url" content="https://itsmellie.com/" />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Fonts: Fraunces (soft display serif) + Plus Jakarta Sans (body, kept from your template) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..800,100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5.3 + Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Site styles -->
+    <link href="css/mellie.css" rel="stylesheet" />
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+
+    <!-- Reusable puzzle-piece shape (drawn once, used everywhere) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="piece" viewBox="0 0 100 100">
+                <path d="M20 24H40A10 10 0 1 1 60 24H80V44A10 10 0 1 1 80 64V84H60A10 10 0 1 0 40 84H20V64A10 10 0 1 0 20 44Z" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- ============ NAV ============ -->
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#top">
+                <svg class="brand-piece" aria-hidden="true"><use href="#piece" /></svg>
+                itsmellieeee
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
+                aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#audience">Audience</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-pill btn-ink" href="#contact">Work with me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="top">
+
+        <!-- ============ HERO: magazine-cover layout ============ -->
+        <header class="hero">
+            <!-- floating puzzle pieces in the background -->
+            <div class="floaters" aria-hidden="true">
+                <svg class="floater f1" data-depth="0.25"><use href="#piece" /></svg>
+                <svg class="floater f2" data-depth="0.5"><use href="#piece" /></svg>
+                <svg class="floater f3" data-depth="0.15"><use href="#piece" /></svg>
+                <svg class="floater f4" data-depth="0.4"><use href="#piece" /></svg>
+                <svg class="floater f5" data-depth="0.3"><use href="#piece" /></svg>
+            </div>
+
+            <div class="cover">
+                <!-- giant name: each letter drops in and snaps like a placed piece -->
+                <h1 class="cover-name" aria-label="Mellie">
+                    <span class="l" style="--i:0" aria-hidden="true">M</span><span class="l" style="--i:1" aria-hidden="true">E</span><span class="l" style="--i:2" aria-hidden="true">L</span><span class="l" style="--i:3" aria-hidden="true">L</span><span class="l" style="--i:4" aria-hidden="true">I</span><span class="l" style="--i:5" aria-hidden="true">E</span>
+                </h1>
+
+                <!-- her photo sits in FRONT of the name, the moving shape BEHIND -->
+                <div class="portrait reveal-pop">
+                    <div class="blob" aria-hidden="true"></div>
+                    <picture>
+                        <source srcset="assets/profile-900.webp" type="image/webp" />
+                        <img src="assets/profile-900.png" alt="Mellie smiling, sitting with her arms wrapped around her knees" width="900" height="1052" />
+                    </picture>
+                    <div class="sticker s1" aria-hidden="true"><i class="bi bi-puzzle-fill"></i> 21,000 pieces</div>
+                    <div class="sticker s2" aria-hidden="true"><i class="bi bi-heart-fill"></i> dog mom</div>
+                </div>
+
+                <!-- bottom corners: pitch on the left, actions on the right -->
+                <div class="cover-bottom container">
+                    <p class="cover-pitch reveal" style="--d:.6s">
+                        Giant jigsaw builds, start to satisfying finish.
+                        <strong>100K+ people</strong> watch every piece click into place.
+                    </p>
+                    <div class="cover-actions reveal" style="--d:.75s">
+                        <a class="btn btn-pill btn-grad btn-lg" href="#contact">Work with me <i class="bi bi-arrow-right"></i></a>
+                        <div class="hero-socials">
+                            <a href="https://www.tiktok.com/@itsmellieeee" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                            <a href="https://www.instagram.com/itsmellieeeee/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCdvf5L_PBRRb5_ZnTyQrdOg" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ PUZZLE-BOX LABEL (replaces the scrolling ribbon) ============ -->
+            <div class="container">
+                <div class="box-label reveal">
+                    <div class="box-cell box-title">
+                        <span class="box-kicker">@itsmellieeee</span>
+                        <span class="box-name">Contents: one very patient puzzler</span>
+                    </div>
+                    <div class="box-cell">
+                        <span class="box-k">Largest build</span>
+                        <span class="box-v">21,000 <small>pcs</small></span>
+                    </div>
+                    <div class="box-cell">
+                        <span class="box-k">Community</span>
+                        <span class="box-v">152K</span>
+                    </div>
+                    <div class="box-cell">
+                        <span class="box-k">Views / 30 days</span>
+                        <span class="box-v">40.5M</span>
+                    </div>
+                    <a class="box-cell box-missing" href="#contact">
+                        <svg class="missing-slot" aria-hidden="true"><use href="#piece" /></svg>
+                        <span>
+                            <span class="box-k">The missing piece</span>
+                            <span class="box-v box-v-sm">Your brand <i class="bi bi-arrow-right"></i></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <span class="eyebrow reveal">About</span>
+                        <h2 class="section-title reveal">One piece <em>at a time.</em></h2>
+                        <p class="lead-soft reveal">
+                            🎶 puzzlin... Mellie is about to do some puzzlin 🎶<br />
+                            I've loved doing puzzles since I was a kid and I'm so thankful I can share those moments with you!
+                            My community trusts what I share because I only feature puzzles and gear I actually use.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-4">
+                    <div class="col-md-4 reveal" style="--d:.05s">
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="bi bi-puzzle"></i></div>
+                            <h3>Giant builds</h3>
+                            <p>Thousands of pieces, documented from the first edge to the final click.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 reveal" style="--d:.15s">
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="bi bi-camera-reels"></i></div>
+                            <h3>Big reveals</h3>
+                            <p>Time-lapses and finales people wait for, like a 40-foot lift reveal.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 reveal" style="--d:.25s">
+                        <div class="pillar">
+                            <div class="pillar-icon"><i class="bi bi-patch-check"></i></div>
+                            <h3>Honest reviews</h3>
+                            <p>Puzzles, boards, subscriptions, and accessories shown in real use.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FEATURED ============ -->
+        <section id="featured" class="section section-tint">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="eyebrow reveal">Featured work</span>
+                    <h2 class="section-title reveal">The videos people <em>remember.</em></h2>
+                </div>
+
+                <!-- Thumbnails: assets/feat-1..3.webp (4:5, 800x1000). View counts are snapshots; refresh with the stats. -->
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 reveal" style="--d:.05s">
+                        <a class="feat-card tilt" href="https://www.tiktok.com/t/ZP8KeWALY/" target="_blank" rel="noopener">
+                            <div class="thumb t1 has-img" role="img" aria-label="Mellie and a friend in a lift basket lowering the finished 21,000-piece puzzle onto a trailer" style="background-image: url('assets/feat-1.webp');">
+                                <i class="bi bi-puzzle-fill"></i>
+                                <span class="play" aria-hidden="true"><i class="bi bi-play-circle-fill"></i></span>
+                                <span class="platform"><i class="bi bi-tiktok"></i></span>
+                            </div>
+                            <div class="feat-body">
+                                <h3>The 21,000-piece puzzle</h3>
+                                <p>A massive build finished with a 40-foot lift reveal.</p>
+                                <div class="feat-stat"><i class="bi bi-play-fill"></i> <span>2.2M views</span></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal" style="--d:.15s">
+                        <a class="feat-card tilt" href="https://www.instagram.com/reel/DdrjaFzqQ3T/" target="_blank" rel="noopener">
+                            <div class="thumb t2 has-img" role="img" aria-label="Mellie holding up her Jigsaw Storage puzzle board case" style="background-image: url('assets/feat-2.webp');">
+                                <i class="bi bi-grid-3x3-gap-fill"></i>
+                                <span class="play" aria-hidden="true"><i class="bi bi-play-circle-fill"></i></span>
+                                <span class="platform"><i class="bi bi-instagram"></i></span>
+                            </div>
+                            <div class="feat-body">
+                                <h3>Puzzle storage, solved</h3>
+                                <p>Where every half-finished puzzle goes: my storage setup, start to finish.</p>
+                                <div class="feat-stat"><i class="bi bi-play-fill"></i> <span>4.1M views</span></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 reveal" style="--d:.25s">
+                        <a class="feat-card tilt" href="https://www.instagram.com/reel/DdDLMjuCEzW/" target="_blank" rel="noopener">
+                            <div class="thumb t3 has-img" role="img" aria-label="Mellie holding the Wasgij Destiny 27 Cafe to Latte puzzle box" style="background-image: url('assets/feat-3.webp');">
+                                <i class="bi bi-stopwatch"></i>
+                                <span class="play" aria-hidden="true"><i class="bi bi-play-circle-fill"></i></span>
+                                <span class="platform"><i class="bi bi-instagram"></i></span>
+                            </div>
+                            <div class="feat-body">
+                                <h3>Wasgij puzzle review</h3>
+                                <p>An honest review of the puzzle where the box picture is only a clue.</p>
+                                <div class="feat-stat"><i class="bi bi-play-fill"></i> <span>3.4M views</span></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ STATS ============ -->
+        <section id="stats" class="section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="eyebrow reveal">By the numbers</span>
+                    <h2 class="section-title reveal">Reach that <em>shows up.</em></h2>
+                    <!-- TODO: update this date every time the numbers change -->
+                    <p class="as-of reveal">Last 30 days, as of September 2026</p>
+                </div>
+
+                <!-- Counters: change data-count to the real number; the animation formats it (113200 → 113.2K).
+                     data-suffix adds a symbol after it (like %). -->
+                <div class="row g-4">
+                    <!-- TikTok -->
+                    <div class="col-lg-6 reveal" style="--d:.05s">
+                        <div class="platform-card">
+                            <div class="platform-head">
+                                <span class="platform-badge tiktok"><i class="bi bi-tiktok"></i></span>
+                                <div>
+                                    <h3>TikTok</h3>
+                                    <a href="https://www.tiktok.com/@itsmellieeee" target="_blank" rel="noopener" class="handle">@itsmellieeee</a>
+                                </div>
+                            </div>
+                            <div class="stat-grid">
+                                <div class="stat"><span class="num" data-count="113200">113.2K</span><span class="label">Followers</span></div>
+                                <div class="stat"><span class="num" data-count="2995358">3M</span><span class="label">Views / 30 days</span></div>
+                                <div class="stat"><span class="num" data-count="115200">115.2K</span><span class="label">Avg views / video</span></div>
+                                <div class="stat"><span class="num" data-count="4.83" data-decimals="2" data-suffix="%">4.83%</span><span class="label">Engagement (sponsored)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Instagram -->
+                    <div class="col-lg-6 reveal" style="--d:.15s">
+                        <div class="platform-card">
+                            <div class="platform-head">
+                                <span class="platform-badge insta"><i class="bi bi-instagram"></i></span>
+                                <div>
+                                    <h3>Instagram</h3>
+                                    <a href="https://www.instagram.com/itsmellieeeee/" target="_blank" rel="noopener" class="handle">@itsmellieeeee</a>
+                                </div>
+                            </div>
+                            <div class="stat-grid">
+                                <div class="stat"><span class="num" data-count="39200">39.2K</span><span class="label">Followers</span></div>
+                                <div class="stat"><span class="num" data-count="37525300">37.5M</span><span class="label">Views / 30 days</span></div>
+                                <div class="stat"><span class="num" data-count="458340">458.3K</span><span class="label">Avg views / reel</span></div>
+                                <div class="stat"><span class="num" data-count="18400000">18.4M</span><span class="label">Top reel views</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combined reach strip -->
+                <div class="reach-strip reveal">
+                    <div><span class="num" data-count="152400">152.4K</span><span class="label">Combined followers</span></div>
+                    <div><span class="num" data-count="40520658">40.5M</span><span class="label">Views / 30 days</span></div>
+                    <div><span class="num" data-count="19300000">19.3M</span><span class="label">All-time likes (TikTok + Instagram)</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ AUDIENCE ============ -->
+        <section id="audience" class="section section-tint">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="eyebrow reveal">Audience</span>
+                    <h2 class="section-title reveal">Who's <em>watching.</em></h2>
+                    <p class="as-of reveal">Instagram audience, last 30 days</p>
+                </div>
+
+                <!-- Bars: set data-value to the real percentage; the bar and label animate to it. -->
+                <div class="row g-4">
+                    <div class="col-lg-4 reveal" style="--d:.05s">
+                        <div class="aud-card">
+                            <h3><i class="bi bi-people"></i> Gender</h3>
+                            <div class="donut" data-value="79.4" style="--p:79.4; --c1: var(--pink); --c2: var(--lav-soft);">
+                                <div class="donut-center"><span class="donut-num">79.4%</span><span>women</span></div>
+                            </div>
+                            <div class="legend"><span><i style="background:var(--pink)"></i>Women</span><span><i style="background:var(--lav-soft)"></i>Men &amp; other</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 reveal" style="--d:.15s">
+                        <div class="aud-card">
+                            <h3><i class="bi bi-calendar-heart"></i> Age</h3>
+                            <div class="bar" data-value="6.0"><span class="bar-label">13&ndash;17</span><div class="bar-track"><div class="bar-fill" style="--w:6.0%"></div></div><span class="bar-num">6.0%</span></div>
+                            <div class="bar" data-value="12.9"><span class="bar-label">18&ndash;24</span><div class="bar-track"><div class="bar-fill" style="--w:12.9%"></div></div><span class="bar-num">12.9%</span></div>
+                            <div class="bar" data-value="29.8"><span class="bar-label">25&ndash;34</span><div class="bar-track"><div class="bar-fill" style="--w:29.8%"></div></div><span class="bar-num">29.8%</span></div>
+                            <div class="bar" data-value="24.3"><span class="bar-label">35&ndash;44</span><div class="bar-track"><div class="bar-fill" style="--w:24.3%"></div></div><span class="bar-num">24.3%</span></div>
+                            <div class="bar" data-value="27.1"><span class="bar-label">45+</span><div class="bar-track"><div class="bar-fill" style="--w:27.1%"></div></div><span class="bar-num">27.1%</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 reveal" style="--d:.25s">
+                        <div class="aud-card">
+                            <h3><i class="bi bi-globe-americas"></i> Top countries</h3>
+                            <div class="bar" data-value="47.7"><span class="bar-label">United States</span><div class="bar-track"><div class="bar-fill" style="--w:47.7%"></div></div><span class="bar-num">47.7%</span></div>
+                            <div class="bar" data-value="6.2"><span class="bar-label">United Kingdom</span><div class="bar-track"><div class="bar-fill" style="--w:6.2%"></div></div><span class="bar-num">6.2%</span></div>
+                            <div class="bar" data-value="4.5"><span class="bar-label">Canada</span><div class="bar-track"><div class="bar-fill" style="--w:4.5%"></div></div><span class="bar-num">4.5%</span></div>
+                            <div class="bar" data-value="3.8"><span class="bar-label">India</span><div class="bar-track"><div class="bar-fill" style="--w:3.8%"></div></div><span class="bar-num">3.8%</span></div>
+                            <div class="bar" data-value="3.1"><span class="bar-label">Australia</span><div class="bar-track"><div class="bar-fill" style="--w:3.1%"></div></div><span class="bar-num">3.1%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="cta">
+            <div class="floaters" aria-hidden="true">
+                <svg class="floater c1"><use href="#piece" /></svg>
+                <svg class="floater c2"><use href="#piece" /></svg>
+                <svg class="floater c3"><use href="#piece" /></svg>
+            </div>
+            <div class="container text-center position-relative">
+                <span class="eyebrow eyebrow-light reveal">Let's build something</span>
+                <h2 class="cta-title reveal">Want to work together?</h2>
+                <p class="cta-sub reveal">Sponsored videos, product features, and long-term partnerships.<br class="d-none d-md-block"> Media kit and rates available on request.</p>
+                <a class="email-btn reveal" href="mailto:hello@itsmellie.com">
+                    <i class="bi bi-envelope-heart"></i>
+                    <span>hello@itsmellie.com</span>
+                </a>
+                <button class="copy-btn reveal" type="button" data-copy="hello@itsmellie.com">
+                    <i class="bi bi-clipboard"></i> <span>Copy email</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+            <span>&copy; <span id="year">2026</span> itsmellieeee</span>
+            <span class="footer-socials">
+                <a href="https://www.tiktok.com/@itsmellieeee" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                <a href="https://www.instagram.com/itsmellieeeee/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCdvf5L_PBRRb5_ZnTyQrdOg" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/mellie.js"></script>
+</body>
+</html>
